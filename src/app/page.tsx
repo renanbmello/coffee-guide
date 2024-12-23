@@ -14,7 +14,6 @@ export default function Home() {
       description: 'Descubra a arte do café espresso e suas variações',
       imageUrl: '/images/espresso.jpg'
     },
-    // Adicionar outras categorias
   ];
 
   return (
