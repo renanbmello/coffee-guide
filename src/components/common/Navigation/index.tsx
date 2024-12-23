@@ -33,10 +33,8 @@ const Navigation: FC = () => {
             Guia do Café
           </Link>
           
-          {/* Desktop Menu */}
           <NavigationDesktop items={navigationItems} />
 
-          {/* Mobile Menu Button */}
           <NavigationMobileButton 
             isOpen={isMenuOpen} 
             onClick={toggleMenu} 
@@ -44,7 +42,6 @@ const Navigation: FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
       <NavigationMobile 
         items={navigationItems} 
         isOpen={isMenuOpen} 
@@ -53,7 +50,6 @@ const Navigation: FC = () => {
   );
 };
 
-// Component for desktop navigation items
 const NavigationDesktop: FC<{ items: NavigationItem[] }> = ({ items }) => (
   <div className="hidden md:flex space-x-4">
     {items.map((item) => (
@@ -68,7 +64,6 @@ const NavigationDesktop: FC<{ items: NavigationItem[] }> = ({ items }) => (
   </div>
 );
 
-// Component for mobile menu button
 const NavigationMobileButton: FC<{ 
   isOpen: boolean; 
   onClick: () => void 
@@ -97,7 +92,6 @@ const NavigationMobileButton: FC<{
   </button>
 );
 
-// Component for mobile navigation items
 const NavigationMobile: FC<{ 
   items: NavigationItem[]; 
   isOpen: boolean 
