@@ -7,11 +7,18 @@ export interface CoffeeMethod {
   imageUrl: string;
 }
 
-export type CoffeeCategory = "espresso" | "pour over" | "cold brew" | "french press" | "aeropress" | "v60";
+export type CoffeeCategory = "espresso" | "pour over";
+// | "cold brew" | "french press" | "aeropress" | "v60";
 
 export interface CategoryInfo {
     id: CoffeeCategory;
     name: string;
     description: string;
     imageUrl: string;
+}
+
+export interface SubCategory {
+  id: string;
+  name: string;
+  imageUrl: string;
 }

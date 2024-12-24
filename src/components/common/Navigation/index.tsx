@@ -11,8 +11,6 @@ interface NavigationItem {
 const navigationItems: NavigationItem[] = [
   { id: 'espresso', name: 'Espresso' },
   { id: 'pour over', name: 'Coados' },
-  { id: 'french press', name: 'Prensa Francesa' },
-  { id: 'aeropress', name: 'Aeropress' },
 ];
 
 const Navigation: FC = () => {
