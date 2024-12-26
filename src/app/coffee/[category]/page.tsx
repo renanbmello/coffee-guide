@@ -20,7 +20,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
   }
 
   return (
-    <div className="p-6 space-y-8">
+    <div className="p-6 space-y-8 bg-coffee-800">
       <CategoryHeader 
         title={categoryInfo.name}
         description={categoryInfo.description}

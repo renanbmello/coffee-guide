@@ -1,4 +1,4 @@
-import { CategoryInfo, CoffeeCategory, SubCategory } from '@/types/coffee'
+import { CategoryInfo, CoffeeCategory, SubCategory, Recipe } from '@/types/coffee'
 import { ICoffeeService } from './interfaces'
 import { categoryData } from './data'
 
@@ -13,5 +13,9 @@ export class CoffeeService implements ICoffeeService {
 
   getAllCategories(): CategoryInfo[] {
     return Object.values(categoryData.categories)
+  }
+
+  getRecipe(category: string, subcategory: string): Recipe | null {
+    return categoryData.recipes[category]?.[subcategory] || null
   }
 } 

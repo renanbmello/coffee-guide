@@ -1,8 +1,9 @@
-import { CoffeeCategory, CategoryInfo, SubCategory } from '@/types/coffee'
+import { CoffeeCategory, CategoryInfo, SubCategory, Recipe } from '@/types/coffee'
 
 interface CoffeeData {
   categories: Record<CoffeeCategory, CategoryInfo>
   subCategories: Record<CoffeeCategory, SubCategory[]>
+  recipes: Record<string, Record<string, Recipe>>
 }
 
 export const categoryData: CoffeeData = {
@@ -10,8 +11,8 @@ export const categoryData: CoffeeData = {
     'espresso': {
       id: 'espresso',
       name: 'Espresso',
-      description: 'Café concentrado extraído sob alta pressão, base para diversas bebidas.',
-      imageUrl: '/images/coffee/espresso/header.jpg'
+      description: 'Café concentrado extraído sob pressão, base para diversas bebidas.',
+      imageUrl: '/images/espresso.jpeg'
     },
     'pour over': {
       id: 'pour over',
@@ -25,7 +26,7 @@ export const categoryData: CoffeeData = {
       {
         id: 'traditional',
         name: 'Espresso Tradicional',
-        imageUrl: '/images/coffee/espresso/traditional.jpg'
+        imageUrl: '/images/espresso.jpeg'
       },
       {
         id: 'ristretto',
@@ -50,5 +51,63 @@ export const categoryData: CoffeeData = {
         imageUrl: '/images/coffee/pour-over/chemex.jpg'
       }
     ]
+  },
+  recipes: {
+    'espresso': {
+      'traditional': {
+        id: 'traditional',
+        name: 'Espresso Tradicional',
+        description: 'O clássico café espresso italiano, extraído em 25-30 segundos.',
+        imageUrl: '/images/coffee/espresso/traditional.jpg',
+        ratio: 2,
+        defaultDose: 18,
+        tools: [
+          {
+            id: 'grinder',
+            name: 'Moedor',
+            description: 'Para moer os grãos na hora com a granulometria adequada',
+            imageUrl: '/images/tools/grinder.jpg'
+          },
+          {
+            id: 'wdt',
+            name: 'WDT',
+            description: 'Ferramenta para distribuição uniforme do café',
+            imageUrl: '/images/tools/wdt.jpg'
+          },
+          {
+            id: 'tamper',
+            name: 'Tamper',
+            description: 'Para compactar o café moído uniformemente',
+            imageUrl: '/images/tools/tamper.jpg'
+          }
+        ],
+        steps: [
+          {
+            id: 1,
+            instruction: 'Moa 18g de café com granulometria fina',
+            tip: 'A granulometria deve ser similar à do açúcar refinado'
+          },
+          {
+            id: 2,
+            instruction: 'Distribua o café uniformemente no porta-filtro usando o WDT',
+            tip: 'Movimentos suaves e circulares garantem uma distribuição homogênea'
+          },
+          {
+            id: 3,
+            instruction: 'Tampe o café com pressão constante',
+            tip: 'Use aproximadamente 15kg de pressão'
+          },
+          {
+            id: 4,
+            instruction: 'Extraia aproximadamente 36g de café em 25-30 segundos',
+            tip: 'O tempo começa a contar quando você liga a bomba'
+          }
+        ]
+      },
+      // ... outras receitas do espresso
+    },
+    'pour over': {
+      // ... receitas do pour over
+    }
   }
 } 

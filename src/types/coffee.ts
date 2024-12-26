@@ -22,3 +22,26 @@ export interface SubCategory {
   name: string;
   imageUrl: string;
 }
+
+export interface Tool {
+  id: string
+  name: string
+  description: string
+  imageUrl: string
+}
+
+export interface Recipe {
+  id: string
+  name: string
+  description: string
+  imageUrl: string
+  ratio: number
+  defaultDose: number
+  tools: Tool[]
+  steps: {
+    id: number
+    instruction: string
+    imageUrl?: string
+    tip?: string
+  }[]
+}
