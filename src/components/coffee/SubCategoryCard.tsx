@@ -27,6 +27,7 @@ export const SubCategoryCard = ({
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-coffee-900/60 to-transparent" />
       </div>
       <div className="p-4">
         <h3 className="text-xl font-semibold text-coffee-800">{name}</h3>

@@ -14,7 +14,7 @@ export const ToolsSection = ({ tools }: ToolsSectionProps) => {
         {tools.map((tool) => (
           <div 
             key={tool.id}
-            className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white text-coffee-800 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
               <Image

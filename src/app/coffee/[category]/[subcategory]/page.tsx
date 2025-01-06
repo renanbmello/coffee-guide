@@ -22,21 +22,23 @@ export default function RecipePage({ params }: RecipePageProps) {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-12 bg-coffee-800 min-h-screen">
-      <RecipeHeader 
-        title={recipe.name}
-        description={recipe.description}
-        imageUrl={recipe.imageUrl}
-      />
+    <div className="min-h-screen bg-coffee-800/90 p-6">
+      <div className="max-w-4xl mx-auto space-y-12">
+        <RecipeHeader 
+          title={recipe.name}
+          description={recipe.description}
+          imageUrl={recipe.imageUrl}
+        />
 
-      <RecipeRatio 
-        ratio={recipe.ratio}
-        defaultDose={recipe.defaultDose}
-      />
+        <RecipeRatio 
+          ratio={recipe.ratio}
+          defaultDose={recipe.defaultDose}
+        />
 
-      <ToolsSection tools={recipe.tools} />
+        <ToolsSection tools={recipe.tools} />
 
-      <PreparationSteps steps={recipe.steps} />
+        <PreparationSteps steps={recipe.steps} />
+      </div>
     </div>
   )
 } 

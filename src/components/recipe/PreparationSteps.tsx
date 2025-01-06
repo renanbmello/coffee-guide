@@ -21,10 +21,10 @@ export const PreparationSteps = ({ steps }: PreparationStepsProps) => {
               <span className="text-xl font-semibold text-coffee-800">{step.id}</span>
             </div>
             
-            <div className="space-y-4">
-              <p className="text-lg">{step.instruction}</p>
+            <div className="flex-1">
+              <p className="text-lg whitespace-pre-line mb-4">{step.instruction}</p>
               {step.tip && (
-                <p className="text-sm text-coffee-600 bg-coffee-50 p-4 rounded-lg">
+                <p className="text-sm text-coffee-600 bg-coffee-50 p-4 rounded-lg whitespace-pre-line w-full">
                   💡 Dica: {step.tip}
                 </p>
               )}

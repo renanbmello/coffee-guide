@@ -13,14 +13,14 @@ interface CategoryPageProps {
 const coffeeService = new CoffeeService()
 
 export default function CategoryPage({ params }: CategoryPageProps) {
-  const categoryInfo = coffeeService.getCategoryInfo(params.category as CoffeeCategory)
+  const categoryInfo = coffeeService.getCategoryInfo(params.category)
   
   if (!categoryInfo) {
     notFound()
   }
 
   return (
-    <div className="p-6 space-y-8 bg-coffee-800">
+    <div className="p-6 space-y-8 bg-coffee-100 min-h-screen">
       <CategoryHeader 
         title={categoryInfo.name}
         description={categoryInfo.description}
