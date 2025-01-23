@@ -9,13 +9,15 @@ export const Sidebar: FC<SidebarProps> = ({ isOpen }) => {
   return (
     <aside
       className={`
-        fixed top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-white shadow-lg
-        transform transition-transform duration-300 ease-in-out z-40
-        md:translate-x-0 overflow-y-auto
+        fixed top-16 left-0 bottom-0 w-64 bg-white shadow-lg
+        transform transition-transform duration-300 ease-in-out z-20
+        md:absolute md:translate-x-0 
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
       `}
     >
-      <SidebarNav />
+      <div className="h-full overflow-y-auto">
+        <SidebarNav />
+      </div>
     </aside>
   );
 }; 
