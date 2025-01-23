@@ -7,7 +7,7 @@ export interface CoffeeMethod {
   imageUrl: string;
 }
 
-export type CoffeeCategory = "espresso" | "pour over";
+export type CoffeeCategory = "espresso" | "pour-over";
 // | "cold brew" | "french press" | "aeropress" | "v60";
 
 export interface CategoryInfo {
