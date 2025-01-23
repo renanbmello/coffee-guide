@@ -14,8 +14,8 @@ interface RecipePageProps {
 
 const coffeeService = new CoffeeService()
 
-export default function RecipePage({ params }: RecipePageProps) {
-  const recipe = coffeeService.getRecipe(params.category, params.subcategory)
+export default async function RecipePage({ params }: RecipePageProps) {
+  const recipe = await coffeeService.getRecipe(params.category, params.subcategory)
   
   if (!recipe) {
     notFound()

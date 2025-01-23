@@ -12,8 +12,8 @@ interface CategoryPageProps {
 
 const coffeeService = new CoffeeService()
 
-export default function CategoryPage({ params }: CategoryPageProps) {
-  const categoryInfo = coffeeService.getCategoryInfo(params.category)
+export default async function CategoryPage({ params }: CategoryPageProps) {
+  const categoryInfo = await coffeeService.getCategoryInfo(params.category)
   
   if (!categoryInfo) {
     notFound()

@@ -15,13 +15,15 @@ export const ClientLayout: FC<ClientLayoutProps> = ({ children }) => {
   const toggleSidebar = () => setIsSidebarOpen(prev => !prev)
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header onMenuToggle={toggleSidebar} isMenuOpen={isSidebarOpen} />
-      <Sidebar isOpen={isSidebarOpen} />
-      <main className="mt-16 md:ml-64 min-h-screen">
-        {children}
-      </main>
+      <div className="flex-1 relative">
+        <Sidebar isOpen={isSidebarOpen} />
+        <main className="mt-16 md:ml-64 bg-coffee-50">
+          {children}
+        </main>
+      </div>
       <Footer />
-    </>
+    </div>
   )
 } 

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { HeroImage } from './HeroImage'
 import { CallToAction } from './CallToAction'
 
@@ -14,7 +13,7 @@ export const HeroSection = () => {
           Aqui compartilho meus conhecimentos sobre café para ajudar todos a tomar uma bebida mais gostosa.
         </p>
 
-        <CallToAction />
+        {/* <CallToAction /> */}
       </div>
 
       <HeroImage />
