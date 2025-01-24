@@ -8,7 +8,7 @@ export const FloatingCard = () => {
         <span className="font-semibold text-coffee-800">Dica do Dia</span>
       </div>
       <p className="text-coffee-600 text-sm">
-        A temperatura ideal para extrair café é entre 92°C e 96°C
+        A temperatura ideal para fazer o café é entre 92°C e 98°C
       </p>
     </div>
   )
