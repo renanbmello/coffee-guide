@@ -1,5 +1,4 @@
 import { HeroImage } from './HeroImage'
-import { CallToAction } from './CallToAction'
 
 export const HeroSection = () => {
   return (
