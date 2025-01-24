@@ -10,7 +10,7 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   { id: 'espresso', name: 'Espresso' },
-  { id: 'pour over', name: 'Coados' },
+  { id: 'pour-over', name: 'Coados' },
 ];
 
 const Navigation: FC = () => {
