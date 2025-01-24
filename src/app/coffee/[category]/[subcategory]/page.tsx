@@ -5,18 +5,20 @@ import { PreparationSteps } from '@/components/recipe/PreparationSteps'
 import { CoffeeService } from '@/services/coffee/CoffeeService'
 import { notFound } from 'next/navigation'
 
-interface PageProps {
-  params: {
+type PageProps = {
+  params: Promise<{
     category: string
     subcategory: string
-  }
-  searchParams?: { [key: string]: string | string[] | undefined }
+  }>
 }
 
 const coffeeService = new CoffeeService()
 
-export default async function RecipePage({ params }: PageProps) {
-  const recipe = await coffeeService.getRecipe(params.category, params.subcategory)
+export default async function RecipePage({
+  params,
+}: PageProps) {
+  const { category, subcategory } = await params
+  const recipe = await coffeeService.getRecipe(category, subcategory)
   
   if (!recipe) {
     notFound()
